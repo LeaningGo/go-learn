@@ -1,6 +1,6 @@
 ## Part 7: 包管理
 
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第七部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第七部分。
 
 ## 什么是软件包？我们为什么要使用它们？
 
