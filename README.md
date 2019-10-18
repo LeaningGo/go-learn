@@ -32,7 +32,7 @@
 #### 指针、结构体和方法
 * [指针](https://github.com/LeaningGo/go-learn/blob/master/go-pointers.md)
 * [结构体](https://github.com/LeaningGo/go-learn/blob/master/go-structures.md)
-* [方法](https://github.com/LeaningGo/go-learn/edit/master/go-methods.md)
+* [方法](https://github.com/LeaningGo/go-learn/blob/master/go-methods.md)
 
 #### 接口
 * [接口 I]()
