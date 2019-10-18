@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十六部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十六部分。
 
 ## 什么是结构体
 
