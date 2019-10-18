@@ -1,5 +1,5 @@
 
-lang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十七部分。
+这里是 [golang 学习教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十七部分。
 
 ## 入门
 
