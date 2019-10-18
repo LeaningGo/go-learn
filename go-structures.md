@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十六部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十六部分。
 
 ## 什么是结构体
 
@@ -593,4 +593,4 @@ func main() {
 
 Go 中的结构体已经结束了。祝你有美好的一天。
 
-## 下一个教程 - [Methods（方法）](https://blog.csdn.net/baobaoxiannv/article/details/102622015)
+## 下一个教程 - [Methods（方法）](https://github.com/LeaningGo/go-learn/blob/master/go-methods.md)
