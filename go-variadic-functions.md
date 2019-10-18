@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十二部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十二部分。
 
 ## 什么是可变参数函数？
 函数通常只接受固定数量的参数。可变参数函数是接受可变数量参数的函数。如果函数定义的最后一个参数用省略号作为前缀 `…`，则该函数可以接受该参数的任意数量的参数。
