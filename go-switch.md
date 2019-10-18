@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十部分。
 
 switch 是一个条件语句，它计算表达式并将其与可能的匹配列表进行比较，并根据匹配执行代码块。可以将其视为编写多个 `if else` 子句的惯用方式。
 
@@ -189,4 +189,4 @@ fallthrough 是 `case` 中的最后一个语句。如果它出现在中间的某
 
 请分享您宝贵的意见和反馈 :)。
 
-## 下一个教程 - [数组和切片](https://blog.csdn.net/baobaoxiannv/article/details/102546473)
+## 下一个教程 - [数组和切片](https://github.com/LeaningGo/go-learn/blob/master/go-arrays-and-slices.md)
