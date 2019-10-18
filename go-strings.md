@@ -1,5 +1,5 @@
 
-lang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十四部分。
+这里是 [golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十四部分。
 
 字符串在 Go 中值得特别提及，因为与其他语言相比，字符串在实现上有所不同。
 
@@ -347,4 +347,4 @@ func main() {
 
 这就是字符串，祝你有美好的一天 :)
 
-## 下一个教程 - [指针](https://blog.csdn.net/baobaoxiannv/article/details/102601008)
+## 下一个教程 - [指针](https://github.com/LeaningGo/go-learn/blob/master/go-pointers.md)
