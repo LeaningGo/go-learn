@@ -1,6 +1,6 @@
 ## Part 9: 循环
 
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第九部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第九部分。
 
 循环语句用于重复执行代码块。
 
