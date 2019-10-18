@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十一部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十一部分。
 
 ## 数组
 数组是属于同一类型的元素的集合。例如，整数 5、8、9、79、76 的集合形成一个数组。Go 中不允许混合使用不同类型的值，例如包含字符串和整数的数组。
@@ -644,4 +644,4 @@ func main() {
 
 这就是数组和切片。感谢你的阅读。请留下宝贵的反馈和意见。
 
-## 下一章 - [可变参数函数](https://blog.csdn.net/baobaoxiannv/article/details/102553284)
+## 下一章 - [可变参数函数](https://github.com/LeaningGo/go-learn/blob/master/go-variadic-functions.md)
