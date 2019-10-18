@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十部分。
 
 switch 是一个条件语句，它计算表达式并将其与可能的匹配列表进行比较，并根据匹配执行代码块。可以将其视为编写多个 `if else` 子句的惯用方式。
 
