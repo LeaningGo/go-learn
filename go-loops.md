@@ -1,6 +1,6 @@
 ## Part 9: 循环
 
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第九部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第九部分。
 
 循环语句用于重复执行代码块。
 
@@ -355,4 +355,4 @@ func main() {
 
 这就是循环。希望你喜欢阅读。请留下您宝贵的意见和反馈。
 
-### 下一个教程 - [switch 声明](https://blog.csdn.net/baobaoxiannv/article/details/102499860)
+### 下一个教程 - [switch 声明](https://github.com/LeaningGo/go-learn/blob/master/go-switch.md)
