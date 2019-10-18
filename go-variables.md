@@ -1,6 +1,6 @@
 ## Part 3: 变量
 
-这是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第三部分，它处理 golang 中的变量。
+这是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第三部分，它处理 golang 中的变量。
 
 你可以阅读 [Golang 教程第二部分](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)：`Hello World`，了解配置 golang 和运行 `hello world` 程序。
 
