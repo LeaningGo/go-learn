@@ -1,6 +1,6 @@
 ## Part 4: 类型
 
-这是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第四部分。
+这是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第四部分。
 
 请阅读 [Golang 教程第三部分 - 变量](https://github.com/LeaningGo/go-learn/blob/master/go-variables.md)以了解变量。
 
