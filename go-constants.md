@@ -1,6 +1,6 @@
 ## Part 5: 常量
 
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第五部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第五部分。
 
 请阅读 [Golang 教程第四部分 - 类型](https://github.com/LeaningGo/go-learn/blob/master/go-types.md)以了解 golang 基本类型。
 
