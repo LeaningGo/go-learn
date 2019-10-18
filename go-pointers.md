@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十五部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十五部分。
 
 在本教程中，我们将学习指针在 Go 中的工作方式，还将理解 Go 指针与其他语言（例如 C 和 C ++）中的指针有何不同。
 
@@ -304,4 +304,4 @@ func main() {
 
 这就是 go 的指针。祝你有美好的一天 :) 
 
-## 下一个教程 - [结构体](https://blog.csdn.net/baobaoxiannv/article/details/102606000)
+## 下一个教程 - [结构体](https://github.com/LeaningGo/go-learn/blob/master/go-structures.md)
