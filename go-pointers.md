@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第十五部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十五部分。
 
 在本教程中，我们将学习指针在 Go 中的工作方式，还将理解 Go 指针与其他语言（例如 C 和 C ++）中的指针有何不同。
 
@@ -40,6 +40,7 @@ func main() {
 }
 ```
 在 [playground](https://play.golang.org/p/A4vmlgxAy8) 运行。
+
 `&` 运算符用于获取变量的地址。在上述程序第九行中，我们将 b 的地址赋值给类型为 *int 的 a。现在说 a 指向 b，当我们打印 a 中的值时，会打印 b 的地址。这个程序输出
 
 &运算符用于获取变量的地址。不一致。在上述程序中，我们将b的地址赋值给类型为*int的a。现在说a指向b，当我们打印a中的值时，会打印b的地址。这个程序输出
@@ -264,7 +265,7 @@ func main() {
 
 虽然这种将指针作为参数传递给函数并对其进行修改的方法是有效的，但这并不是在 Go 中实现这一点的惯用方法，惯用方法是切片。
 
-让我们使用[切片](https://blog.csdn.net/baobaoxiannv/article/details/102546473)重写相同的程序。
+让我们使用[切片](https://github.com/LeaningGo/go-learn/blob/master/go-arrays-and-slices.md)重写相同的程序。
 
 ```go
 package main
