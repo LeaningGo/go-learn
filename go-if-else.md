@@ -174,7 +174,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/hv_27vbIBC) 上运行
 
-现在编译器会很愉快,所以我们 ������。
+现在编译器会很愉快,所以我们 :)
 
 这就是本教程的结尾。希望你喜欢阅读。请留下您宝贵的意见和反馈。
 
