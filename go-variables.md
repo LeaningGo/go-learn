@@ -315,6 +315,4 @@ func main() {
 
 在 [`playground`](https://play.golang.org/p/K5rz4gxjPj) 上运行。
 
-谢谢阅读。请在评论部分发布您的反馈和查询。
-
 ### 下一个教程 - [类型](https://github.com/LeaningGo/go-learn/blob/master/go-types.md)
