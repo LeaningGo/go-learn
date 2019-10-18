@@ -1,6 +1,8 @@
 
 ### Golang 系列学习教程
 
+> 如果在阅读中发现任何错误，可以在 issue 列表创建 issue！
+
 #### 入门
 * [安装 Go](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)
 * [Hello World](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)
