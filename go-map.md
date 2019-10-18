@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十三部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十三部分。
 
 ## 什么是集合?
 
@@ -312,4 +312,4 @@ func main() {
 
 集合就是这样。谢谢阅读。祝你有美好的一天。
 
-## 下一个教程 - [字符串](https://blog.csdn.net/baobaoxiannv/article/details/102600138)
+## 下一个教程 - [字符串](https://github.com/LeaningGo/go-learn/blob/master/go-strings.md)
