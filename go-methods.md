@@ -1,9 +1,9 @@
 
-这里是 [golang 学习教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第十七部分。
+这里是 [golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十七部分。
 
 ## 入门
 
-方法只是在 func 关键字和方法名之间具有特殊接收器类型的[函数](https://blog.csdn.net/baobaoxiannv/article/details/101059929)。接收方可以是结构体类型，也可以是非结构体类型。
+方法只是在 func 关键字和方法名之间具有特殊接收器类型的[函数](https://github.com/LeaningGo/go-learn/blob/master/go-functions.md)。接收方可以是结构体类型，也可以是非结构体类型。
 
 下面提供了方法声明的语法。
 
