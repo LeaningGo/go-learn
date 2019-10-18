@@ -1,4 +1,4 @@
-part 2: Hello World
+## part 2: Hello World
 
 这是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)的第二部分，请阅读 [Golang 教程第一部分](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)简介和安装。了解 golang 是什么？以及如何安装 golang。
 
