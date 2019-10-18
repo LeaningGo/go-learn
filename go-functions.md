@@ -1,6 +1,6 @@
 ## Part 6: 函数
 
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第六部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第六部分。
 
 ## 什么是函数？
 
