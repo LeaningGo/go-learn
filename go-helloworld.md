@@ -1,6 +1,6 @@
- rt 2: Hello World
+part 2: Hello World
 
-这是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第二部分，请阅读 [Golang 教程第一部分](https://blog.csdn.net/baobaoxiannv/article/details/88895702)简介和安装。了解 golang 是什么？以及如何安装 golang。
+这是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)的第二部分，请阅读 [Golang 教程第一部分](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)简介和安装。了解 golang 是什么？以及如何安装 golang。
 
 没有比学习编程语言更好的方法了。让我们继续写下我们的第一个去项目。
 
@@ -102,10 +102,6 @@ func main() { //3
 
 **fmt.Println("Hello World")** -  `fmt` 包的 `Println` 函数用于将文本写入标准输出。
 
-该代码可从 [github](https://github.com/golangbot/hello) 下载。
+您现在可以继续阅读 [Golang 教程第 3 部分](://github.com/LeaningGo/go-learn/blob/master/go-variables.md)：**变量**，以了解 golang 中的变量。
 
-您现在可以继续阅读 [Golang 教程第 3 部分](https://blog.csdn.net/baobaoxiannv/article/details/101038097)：**变量**，以了解 golang 中的变量。
-
-请在评论部分发布您的反馈和查询。谢谢。
-
-### 下一个教程 - [变量](https://blog.csdn.net/baobaoxiannv/article/details/101038097)
+### 下一个教程 - [变量](https://github.com/LeaningGo/go-learn/blob/master/go-variables.md)

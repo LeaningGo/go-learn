@@ -1,8 +1,8 @@
 ## Part 5: 常量
 
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第五部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第五部分。
 
-请阅读 [Golang 教程第四部分 - 类型](https://blog.csdn.net/baobaoxiannv/article/details/101050769)以了解 golang 基本类型。
+请阅读 [Golang 教程第四部分 - 类型](https://github.com/LeaningGo/go-learn/blob/master/go-types.md)以了解 golang 基本类型。
 
 ## 定义
 
@@ -230,4 +230,4 @@ func main() {
 
 本章是常量。请分享您宝贵的反馈和意见。
 
-### 下一教程 - [函数](https://blog.csdn.net/baobaoxiannv/article/details/101059929)
+### 下一教程 - [函数](https://github.com/LeaningGo/go-learn/blob/master/go-functions.md)

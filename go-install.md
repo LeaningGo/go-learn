@@ -1,3 +1,5 @@
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第一部分。
+
 ##### step 1：获取 golang 二进制文件 
 ```
 wget https://storage.googleapis.com/go1.11.4.linux-amd64.tar.gz
@@ -44,3 +46,5 @@ go version go1.11.4 linux/amd64
 
 **安装成功**
 **其他版本同理，只需要修改一下 wget 的路径即可。**
+
+## 下一个教程 - [helloworld](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)

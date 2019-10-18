@@ -1,8 +1,8 @@
 ## Part 3: 变量
 
-这是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第三部分，它处理 golang 中的变量。
+这是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第三部分，它处理 golang 中的变量。
 
-您可以阅读 [Golang 教程第二部分](https://blog.csdn.net/baobaoxiannv/article/details/101036173)：`Hello World`，了解配置 golang 和运行 `hello world` 程序。
+你可以阅读 [Golang 教程第二部分](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)：`Hello World`，了解配置 golang 和运行 `hello world` 程序。
 
 ## 什么是变量
 变量是给定给内存位置的名称，用于存储特定类型的值。在 go 中声明变量有多种语法。
@@ -317,4 +317,4 @@ func main() {
 
 谢谢阅读。请在评论部分发布您的反馈和查询。
 
-### 下一个教程 - [类型](https://blog.csdn.net/baobaoxiannv/article/details/101050769)
+### 下一个教程 - [类型](https://github.com/LeaningGo/go-learn/blob/master/go-types.md)

@@ -1,8 +1,8 @@
 ## Part 4: 类型
 
-这是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第四部分。
+这是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第四部分。
 
-请阅读 [Golang 教程第三部分 - 变量](https://blog.csdn.net/baobaoxiannv/article/details/101038097)以了解变量。
+请阅读 [Golang 教程第三部分 - 变量](https://github.com/LeaningGo/go-learn/blob/master/go-variables.md)以了解变量。
 
 以下是 go 中可用的基本类型：
 
@@ -329,4 +329,4 @@ func main() {
 
 本章结束。请在评论部分发布您的反馈和查询。
 
-### 下一个教程 - [常量](https://blog.csdn.net/baobaoxiannv/article/details/101058677)
+### 下一个教程 - [常量](https://github.com/LeaningGo/go-learn/blob/master/go-constants.md)

@@ -1,7 +1,6 @@
 ## Part 7: 包管理
 
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第七部分。
-
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第七部分。
 
 ## 什么是软件包？我们为什么要使用它们？
 
@@ -321,4 +320,4 @@ func main() {
 
 包管理是这样的。希望你喜欢阅读。请留下您宝贵的意见和反馈 :)。
 
-### 下一个教程 - [if else 语句](https://blog.csdn.net/baobaoxiannv/article/details/101108296)
+## 下一个教程 - [if else 语句](https://github.com/LeaningGo/go-learn/blob/master/go-if-else.md)

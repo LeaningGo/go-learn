@@ -1,6 +1,6 @@
 ## Part 6: 函数
 
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第六部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第六部分。
 
 ## 什么是函数？
 
@@ -158,4 +158,4 @@ func main() {
 
 我们结束了本章。请留下您宝贵的意见和反馈。谢谢阅读。
 
-### 下一篇教程 - [包管理](https://blog.csdn.net/baobaoxiannv/article/details/101105220)
+### 下一篇教程 - [包管理](https://github.com/LeaningGo/go-learn/blob/master/go-packages.md)

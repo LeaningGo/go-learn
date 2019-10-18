@@ -1,6 +1,6 @@
- rt 8: if else 使用
+## part 8: if else 使用
 
-这里是 [Golang 教程系列](https://blog.csdn.net/baobaoxiannv/article/category/9365771)的第八部分。
+这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第八部分。
 
 **if** 是一个条件语句。**if** 语句的语法是：
 
@@ -178,5 +178,5 @@ func main() {
 
 这就是本教程的结尾。希望你喜欢阅读。请留下您宝贵的意见和反馈。
 
-### 下一个教程 - [循环](https://blog.csdn.net/baobaoxiannv/article/details/101112550)
+### 下一个教程 - [循环](https://github.com/LeaningGo/go-learn/blob/master/go-loops.md)
 
