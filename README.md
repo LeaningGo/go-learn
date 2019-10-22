@@ -21,7 +21,7 @@
 * git add --all
 * git commit -m "fix xxx.md file"
 * git push origin branch1
-* 访问你的仓库副本，点击右边的 **`pull request`**
+* 访问你的仓库副本，点击右边的 **`pull request`** 按钮
 * 输入标题以及描述
 * 最后一步 @xichengliudui
 
