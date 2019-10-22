@@ -1,7 +1,14 @@
 
 ### Golang 系列学习教程
 
-> 如果在阅读中发现任何错误，可以在 issue 列表创建 issue！
+#### 贡献方式
+
+1: 在 Issues 列表创建 Issue
+
+* 点击 **`Issues`**
+* 点击绿色按钮 **`new Issue`**
+* 输出标记已经描述
+* 最后一步 [@]xichengliudui
 
 #### 入门
 * [安装 Go](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)
