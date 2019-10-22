@@ -8,7 +8,7 @@
 * 点击 **`Issues`**
 * 点击绿色按钮 **`new Issue`**
 * 输出标记已经描述
-* 最后一步 [at]xichengliudui
+* 最后一步 (@)xichengliudui
 
 #### 入门
 * [安装 Go](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)
