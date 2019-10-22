@@ -3,11 +3,26 @@
 
 #### 贡献方式
 
+> 如果你发现文档中有任何错误的地方都可以通过以下两种方式进行贡献！
+
 1: 在 Issues 列表创建 Issue
 
 * 点击 **`Issues`**
 * 点击绿色按钮 **`new Issue`**
-* 输出标记已经描述
+* 输入标题以及描述
+* 最后一步 @xichengliudui
+
+2: 创建 Pull Request（拉取请求）
+
+* 点击右上角 **`Fork`** 按钮，创建上游仓库副本
+* 使用 git 命令克隆仓库副本 eg: git clone git@github.com:LeaningGo/go-learn.git
+* 创建新分支 eg: git checkout -b branch1
+* 修改错误文件并保存
+* git add --all
+* git commit -m "fix xxx.md file"
+* git push origin branch1
+* 访问你的仓库副本，点击右边的 **`pull request`**
+* 输入标题以及描述
 * 最后一步 @xichengliudui
 
 #### 入门
