@@ -35,8 +35,8 @@
 * [方法](https://github.com/LeaningGo/go-learn/blob/master/go-methods.md)
 
 #### 接口
-* [接口 I]()
-* [接口 II]()
+* [接口 I](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md)
+* [接口 II](https://github.com/LeaningGo/go-learn/blob/master/interface%20II.md)
 
 #### 并发
 * [并发介绍]()
