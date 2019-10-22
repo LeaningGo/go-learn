@@ -139,7 +139,7 @@ Area of rectangle 50
 Area of circle 452.389342  
 ```
 
-方法的上述属性用于实现接口。我们将在下一篇教程中详细讨论接口。
+方法的上述属性用于实现接口。我们将在下一篇教程中详细讨论[接口](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md)。
 
 ## 指针接收器 vs 值接收器（Pointer Receivers vs Value Receivers）
 到目前为止，我们只看到了带有值接收器的方法。可以使用指针接收器创建方法。值和指针接收器之间的区别是，**在方法内部使用指针接收器所做的更改对调用者是可见的，而在值接收器中则不是这样**。让我们通过一个程序来理解这一点。
