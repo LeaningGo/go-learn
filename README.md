@@ -61,7 +61,7 @@
 * [接口 II](https://github.com/LeaningGo/go-learn/blob/master/interface%20II.md)
 
 #### 并发
-* [并发介绍]()
+* [并发介绍](https://github.com/LeaningGo/go-learn/blob/master/Introduction%20to%20Concurrency.md)
 * [管理和使用]()
 * [Channels]()
 * [Buffered Channels and Worker Pools]()
