@@ -63,10 +63,10 @@
 #### 并发
 * [并发介绍](https://github.com/LeaningGo/go-learn/blob/master/Introduction%20to%20Concurrency.md)
 * [goroutines](https://github.com/LeaningGo/go-learn/blob/master/goroutines.md)
-* [Channels]()
-* [Buffered Channels and Worker Pools]()
-* [Select]()
-* [Mutex（互斥锁）]()
+* [Channels](https://github.com/LeaningGo/go-learn/blob/master/channels.md)
+* [Buffered Channels and Worker Pools](https://github.com/LeaningGo/go-learn/blob/master/buffered-channels-worker-pools.md)
+* [Select](https://github.com/LeaningGo/go-learn/blob/master/select.md)
+* [Mutex（互斥锁）](https://github.com/LeaningGo/go-learn/blob/master/mutex.md)
 
 #### 面向对象编程
 * [结构替代类]()
