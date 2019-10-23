@@ -62,7 +62,7 @@
 
 #### 并发
 * [并发介绍](https://github.com/LeaningGo/go-learn/blob/master/Introduction%20to%20Concurrency.md)
-* [管理和使用]()
+* [goroutines](https://github.com/LeaningGo/go-learn/blob/master/goroutines.md)
 * [Channels]()
 * [Buffered Channels and Worker Pools]()
 * [Select]()
