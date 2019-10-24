@@ -35,38 +35,38 @@
 * [常量](go-constants.md)
 
 #### 函数和包
-* [函数](https://github.com/LeaningGo/go-learn/blob/master/go-functions.md)
-* [包](https://github.com/LeaningGo/go-learn/blob/master/go-packages.md)
+* [函数](go-functions.md)
+* [包](go-packages.md)
 
 #### 条件语句和循环
-* [if-else](https://github.com/LeaningGo/go-learn/blob/master/go-if-else.md)
-* [循环](https://github.com/LeaningGo/go-learn/blob/master/go-loops.md)
-* [switch](https://github.com/LeaningGo/go-learn/blob/master/go-switch.md)
+* [if-else](go-if-else.md)
+* [循环](go-loops.md)
+* [switch](go-switch.md)
 
 #### 数组、切片和可变参数函数
-* [数组和切片](https://github.com/LeaningGo/go-learn/blob/master/go-switch.md)
-* [可变参数函数](https://github.com/LeaningGo/go-learn/blob/master/go-variadic-functions.md)
+* [数组和切片](go-switch.md)
+* [可变参数函数](go-variadic-functions.md)
 
 #### 更多类型
-* [Map](https://github.com/LeaningGo/go-learn/blob/master/go-map.md)
-* [字符串](https://github.com/LeaningGo/go-learn/blob/master/go-strings.md) 
+* [Map](go-map.md)
+* [字符串](go-strings.md) 
 
 #### 指针、结构体和方法
-* [指针](https://github.com/LeaningGo/go-learn/blob/master/go-pointers.md)
-* [结构体](https://github.com/LeaningGo/go-learn/blob/master/go-structures.md)
-* [方法](https://github.com/LeaningGo/go-learn/blob/master/go-methods.md)
+* [指针](go-pointers.md)
+* [结构体](go-structures.md)
+* [方法](go-methods.md)
 
 #### 接口
-* [接口 I](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md)
-* [接口 II](https://github.com/LeaningGo/go-learn/blob/master/interface%20II.md)
+* [接口 I](interface%20I.md)
+* [接口 II](interface%20II.md)
 
 #### 并发
-* [并发介绍](https://github.com/LeaningGo/go-learn/blob/master/Introduction%20to%20Concurrency.md)
+* [并发介绍](Introduction%20to%20Concurrency.md)
 * [goroutines](goroutines.md)
-* [Channels](https://github.com/LeaningGo/go-learn/blob/master/channels.md)
-* [Buffered Channels and Worker Pools](https://github.com/LeaningGo/go-learn/blob/master/buffered-channels-worker-pools.md)
-* [Select](https://github.com/LeaningGo/go-learn/blob/master/select.md)
-* [Mutex（互斥锁）](https://github.com/LeaningGo/go-learn/blob/master/mutex.md)
+* [Channels](channels.md)
+* [Buffered Channels and Worker Pools](buffered-channels-worker-pools.md)
+* [Select](select.md)
+* [Mutex（互斥锁）](mutex.md)
 
 #### 面向对象编程
 * [结构替代类]()
