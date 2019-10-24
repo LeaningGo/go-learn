@@ -26,13 +26,13 @@
 * 最后一步 @xichengliudui
 
 #### 入门
-* [安装 Go](https://github.com/LeaningGo/go-learn/blob/master/go-install.md)
-* [Hello World](https://github.com/LeaningGo/go-learn/blob/master/go-helloworld.md)
+* [安装 Go](go-install.md)
+* [Hello World](go-helloworld.md)
 
 #### 变量、类型和常量
-* [变量](https://github.com/LeaningGo/go-learn/blob/master/go-variables.md)
-* [类型](https://github.com/LeaningGo/go-learn/blob/master/go-types.md)
-* [常量](https://github.com/LeaningGo/go-learn/blob/master/go-constants.md)
+* [变量](go-variables.md)
+* [类型](go-types.md)
+* [常量](go-constants.md)
 
 #### 函数和包
 * [函数](https://github.com/LeaningGo/go-learn/blob/master/go-functions.md)
