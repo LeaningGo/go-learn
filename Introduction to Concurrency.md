@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第二十部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第二十部分。
 golang 是一种并发式语言，而不是平行语言。在讨论在 Go 中如何处理并发之前，我们必须首先理解什么是并发，以及它与并行有什么不同。
 
 ## 什么是并发？
