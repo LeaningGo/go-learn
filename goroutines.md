@@ -1,4 +1,4 @@
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第二十一部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第二十一部分。
 
 在上一教程中，我们讨论了并发及其与并行性的区别。在本教程中，我们将讨论如何使用 Goroutines 在 Go 中实现并发。
 
