@@ -205,4 +205,229 @@ Final output 1536
 
 类似地，如果 Goroutine 正在等待接收来自某个 channels 的数据，那么其他 Goroutine 将在该通道上写入数据，否则程序将陷入恐慌。
 
+```go
+package main
+
+
+func main() {  
+    ch := make(chan int)
+    ch <- 5
+}
+```
+在 [playground](https://play.golang.org/p/q1O5sNx4aW) 上运行。
+
+在上面的程序中，创建了一个 channels 叫做 ch，我们在第 5 行中发送 channels ch <- 5。但是没有任何 Goroutine 从 channels 中接收 ch。因此这个程序运行将会陷入恐慌，抛出以下错误
+```
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [chan send]:  
+main.main()  
+    /tmp/sandbox249677995/main.go:6 +0x80
+```
+
+## 单向 Channels 
+到目前为止我们学习的 channels 都是双向的，即：可以在它们上发送数据和接收数据。当然也可以创建单向 channels，即：仅发送或者仅接收数据
+
+```go
+package main
+
+import "fmt"
+
+func sendData(sendch chan<- int) {  
+    sendch <- 10
+}
+
+func main() {  
+    sendch := make(chan<- int)
+    go sendData(sendch)
+    fmt.Println(<-sendch)
+}
+```
+在 [playground](https://play.golang.org/p/PRKHxM-iRK) 上运行。
+
+在上面的程序中，我们在第十行之创建了发送 channels sendch，当箭头指向 channels 时，chan<- int 表示是发送 channels，我们在第十二行尝试着从一个只发送数据的 channels 中接收数据这是不允许的，当程序运行时，编译器会抛出错误。
+
+```
+main.go:11: invalid operation: <-sendch (receive from send-only type chan<- int)
+```
+
+**一切都是很好的，但是如果只是发送数据但是无法接收数据的 channels 又有什么用处呢？**
+
+**这就是使用 channels 转换（channel conversion）的地方。可以将双向 channels  转换为仅发送或仅接收 channels，反之亦然**
+
+```go
+package main
+
+import "fmt"
+
+func sendData(sendch chan<- int) {  
+    sendch <- 10
+}
+
+func main() {  
+    chnl := make(chan int)
+    go sendData(chnl)
+    fmt.Println(<-chnl)
+}
+```
+在 [playground](https://play.golang.org/p/aqi_rJ1U8j) 上运行。
+
+在上面程序的第十行中，我们创建一个双向 channels chnl。它在第十一行中中作为参数传递给 sendData Goroutine。sendData 函数在参数 `sendch chan<- int` 中将这个 channels 转换为第五行中的一个只发送的 channels。然后在第十二行接收 channels 这个程序将打印 10 作为输出。
+
+## 关闭 Channels 和用于 Channels 上的 range 循环
+
+发送方可以关闭 channels 来通知接收方 channels 上不再发送数据。
+
+在接收来自 channels 的数据时，接收器可以使用一个额外的变量来检查信道是否已经关闭。
+
+```go
+v, ok := <- ch  
+```
+
+在上面的语句中，如果发送操作成功接收到 channels 的值，则 ok 为 true。如果 ok 是 false，这意味着我们是从一个关闭的 channels 读取数据。从关闭的 channels 读取的值将是 channels 类型的零值。例如，如果 channels 是 int chan，那么从关闭 channels 接收的值将为 0。
+```go
+package main
+
+import (  
+    "fmt"
+)
+
+func producer(chnl chan int) {  
+    for i := 0; i < 10; i++ {
+        chnl <- i
+    }
+    close(chnl)
+}
+func main() {  
+    ch := make(chan int)
+    go producer(ch)
+    for {
+        v, ok := <-ch
+        if ok == false {
+            break
+        }
+        fmt.Println("Received ", v, ok)
+    }
+}
+```
+在 [playground](https://play.golang.org/p/XWmUKDA2Ri) 上运行。
+
+在上面的程序中，`producer Goroutine` 将 0 到 9 写入 chnl channels，然后关闭 channels。main 函数在十六行中有一个无限的 for 循环，它检查 channels 是否在第十八行中使用变量 ok 关闭。如果 ok 为 false，则表示 channels 关闭，因此循环中断。否则，将打印接收到的值和 ok 的值。这个程序打印
+
+```
+Received  0 true  
+Received  1 true  
+Received  2 true  
+Received  3 true  
+Received  4 true  
+Received  5 true  
+Received  6 true  
+Received  7 true  
+Received  8 true  
+Received  9 true  
+```
+
+for 循环的 for range 形式可用于从 channels 接收值，直到 channels 关闭。
+
+让我们使用 for range 循环重写上面的程序。
+
+```go
+package main
+
+import (  
+    "fmt"
+)
+
+func producer(chnl chan int) {  
+    for i := 0; i < 10; i++ {
+        chnl <- i
+    }
+    close(chnl)
+}
+func main() {  
+    ch := make(chan int)
+    go producer(ch)
+    for v := range ch {
+        fmt.Println("Received ",v)
+    }
+} 
+```
+在 [playground](https://play.golang.org/p/JJ3Ida1r_6) 上运行。
+
+十六行中的 for range 循环从 ch channels 接收数据，直到它关闭。一旦 ch 关闭，循环将自动退出。这个程序输出
+
+```
+Received  0  
+Received  1  
+Received  2  
+Received  3  
+Received  4  
+Received  5  
+Received  6  
+Received  7  
+Received  8  
+Received  9  
+```
+
+可以使用 for range 循环重写另一个 channel 示例部分中的程序，使其具有更多的代码可重用性。
+
+如果你仔细看一下这个程序，你会注意到在 calcSquares 函数和 calcCubes 函数中都重复了找到数字的单个数字的代码。我们将把代码移动到它自己的函数中，并发调用它。
+
+```go
+package main
+
+import (  
+    "fmt"
+)
+
+func digits(number int, dchnl chan int) {  
+    for number != 0 {
+        digit := number % 10
+        dchnl <- digit
+        number /= 10
+    }
+    close(dchnl)
+}
+func calcSquares(number int, squareop chan int) {  
+    sum := 0
+    dch := make(chan int)
+    go digits(number, dch)
+    for digit := range dch {
+        sum += digit * digit
+    }
+    squareop <- sum
+}
+
+func calcCubes(number int, cubeop chan int) {  
+    sum := 0
+    dch := make(chan int)
+    go digits(number, dch)
+    for digit := range dch {
+        sum += digit * digit * digit
+    }
+    cubeop <- sum
+}
+
+func main() {  
+    number := 589
+    sqrch := make(chan int)
+    cubech := make(chan int)
+    go calcSquares(number, sqrch)
+    go calcCubes(number, cubech)
+    squares, cubes := <-sqrch, <-cubech
+    fmt.Println("Final output", squares+cubes)
+}
+```
+在 [playground](https://play.golang.org/p/oL86W9Ui03) 上运行。
+
+上面程序中的 numbers 函数现在包含了从数字中获取单个数字的逻辑，它由 calcSquares 函数和 calcCubes 函数同时调用。一旦数字中没有更多的数字，channels 在第十三行中关闭。calcSquares 和 calcCubes Goroutines 使用 for range 循环监听它们各自的 channels，直到它关闭。程序的其余部分是相同的。这个程序也会打印
+
+```go
+Final output 1536  
+```
+
+这里是本教程的结尾。channels 中很少有其他概念，如缓冲 channels、工作池和 select。我们将在单独的教程中讨论它们。感谢你的阅读。祝你有美好的一天。:)
+
+## 下一个教程 - [缓冲 Channels 和 工作池（Worker Pools）]()
+
 
