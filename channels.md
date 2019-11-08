@@ -428,6 +428,6 @@ Final output 1536
 
 这里是本教程的结尾。channels 中很少有其他概念，如缓冲 channels、工作池和 select。我们将在单独的教程中讨论它们。感谢你的阅读。祝你有美好的一天。:)
 
-## 下一个教程 - [缓冲 Channels 和 工作池（Worker Pools）]()
+## 下一个教程 - [缓冲 Channels 和 工作池（Worker Pools）](buffered-channels-worker-pools.md)
 
 
