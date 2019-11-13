@@ -216,7 +216,9 @@ All go routines finished executing
 以下是我们的工作池的核心功能
 
 * 创建 Goroutine 池，该缓冲池在输入缓冲的 channels 上监听等待分配的 job（任务/作业）
-* 
+* 向输入缓冲 channels 添加作业
+* 作业完成后将结果写入输出缓冲 channels
+* 从输出缓冲 channels 读取和打印结果
 
 
 ```go
