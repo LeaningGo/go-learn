@@ -1,5 +1,5 @@
 
-这里是 [Golang 教程系列](https://github.com/LeaningGo/go-learn)的第二十三部分。
+这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第二十三部分。
 
 我们在[前一篇教程](channels.md)中讨论的所有 channels 基本上都都是没有缓冲的。就像我们在 channels 教程中详细讨论的，发送和接收到非缓冲 channels 是阻塞的。
 
