@@ -216,8 +216,8 @@ All go routines finished executing
 以下是我们的工作池的核心功能
 
 * 创建 Goroutine 池，该缓冲池在输入缓冲的 channels 上监听等待分配的 job（任务/作业）
-* 向输入缓冲 channels 添加作业
-* 作业完成后将结果写入输出缓冲 channels
+* 向输入缓冲 channels 添加 job
+* job 完成后将结果写入输出缓冲 channels
 * 从输出缓冲 channels 读取和打印结果
 
 
@@ -242,7 +242,7 @@ var jobs = make(chan Job, 10)
 var results = make(chan Result, 10)  
 ```
 
-Worker Goroutines 监听 job 缓冲 channels 上的新任务。任务完成后，将结果写入结果缓冲 channels。
+Worker Goroutines 监听 job 缓冲 channels 上的新任务。job 完成后，将结果写入结果缓冲 channels。
 
 下面的 `digit` 函数实际执行查找整数的个位数和并返回它的工作。我们将向这个函数添加一个 2 秒的休眠时间，只是为了模拟这个函数需要一些时间来计算结果。
 
@@ -260,7 +260,7 @@ func digits(number int) int {
 }
 ```
 
-接下来，我们将编写一个创建工作程序 Goroutine 的函数。
+接下来，我们将编写创建一个程序 worker Goroutine 函数。
 
 ```go
 func worker(wg *sync.WaitGroup) {  
@@ -289,7 +289,7 @@ func createWorkerPool(noOfWorkers int) {
 
 上面的函数以要创建的 worker 的数量作为参数。它在创建 Goroutine 之前调用 wg.Add(1) 来增加 WaitGroup 计数器。然后通过将 WaitGroup wg 的地址传递给 worker 函数来创建 worker Goroutines。在创建了所需的 worker Goroutines 之后，它通过调用 wg.Wait() 来等待所有 Goroutines 完成它们的执行。在所有的 goroutine 完成执行之后，它会关闭 results channels，因为所有的 goroutine 都已经完成了它们的执行，没有其他人会进一步写入  results channels。
 
-现在我们已经准备好了工作者池，让我们继续编写将工作分配给工作者的函数。
+现在我们已经准备好了 worker 池，让我们继续编写将 job 分配给 worker 的函数。
 
 ```go
 func allocate(noOfJobs int) {  
@@ -336,7 +336,7 @@ func main() {
 ```
 
 
-我们首先将程序的执行开始时间存储在主函数的第二行中，并在最后一行(第十二行)中计算结束时间和开始时间之间的时间差，并显示程序运行所需的总时间。这是必需的，因为我们将通过更改 Goroutines 的数量来执行一些基本测试。
+我们首先将程序的执行开始时间存储在 mian 函数的第二行中，并在最后一行(第十二行)中计算结束时间和开始时间之间的时间差，并显示程序运行所需的总时间。这是必需的，因为我们将通过更改 Goroutines 的数量来执行一些基本测试。
 
 `noOfJobs` 被设置为 100，然后调用 allocate 来将 job 添加到 job channels。
 
