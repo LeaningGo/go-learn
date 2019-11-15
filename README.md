@@ -69,9 +69,9 @@
 * [Mutex（互斥锁）](mutex.md)
 
 #### 面向对象编程
-* [结构替代类]()
-* [组合替代继承]()
-* [多态]()
+* [结构替代类](structs-instead-of-classes.md)
+* [组合替代继承](inheritance.md)
+* [多态](polymorphism.md)
 
 #### （Defer and Error Handling）延迟和错误处理
 * [延迟（defer）]()
