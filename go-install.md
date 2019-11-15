@@ -38,7 +38,7 @@ export PATH=$PATH:$GOBIN:$GOPKG:$GOPATH/bin
 source /etc/profile
 ```
 
-##### step 4：验证成功
+##### step 5：验证成功
 ```
 root@ubuntumaster001:/home/liudui# go version
 go version go1.11.4 linux/amd64
