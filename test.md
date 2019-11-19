@@ -1,75 +1,28 @@
-hold 
-qewqeq
+```go
+// 这里全部都是张三提交的代码。
 
-this is test file.
+func main() {
+	var errorCount int
 
-hold 
-eqeq
+	kubectl := cmd.NewKubectlCommand(os.Stdin, ioutil.Discard, ioutil.Discard)
+	errors := cmdsanity.RunCmdChecks(kubectl, cmdsanity.AllCmdChecks, []string{})
+	for _, err := range errors {
+		errorCount++
+		fmt.Fprintf(os.Stderr, "     %d. %s\n", errorCount, err)
+	}
 
-this is test file.hold 
+	errors = cmdsanity.RunGlobalChecks(cmdsanity.AllGlobalChecks)
+	for _, err := range errors {
+		errorCount++
+		fmt.Fprintf(os.Stderr, "     %d. %s\n", errorCount, err)
+	}
 
-eqweqweqw
+	if errorCount > 0 {
+		fmt.Fprintf(os.Stdout, "Found %d errors.\n", errorCount)
+		os.Exit(1)
+	}
 
-this is eqweqwtest file.
+	fmt.Fprintln(os.Stdout, "Congrats, CLI looks good!")
+}
 
-hold 
-dqwdqweqw
-
-
-this is teseqweqwt file.
-hold 
-
-
-eqweqweqwe
-this is teqweest file.hold 
-eqweqw
-
-this is test file.hold 
-eqweqwe
-this is test file.h
-old 
-
-qeqwe
-this is qwetest file.hold 
-eqweqw
-this is test file.hold 
-hold eqweqweqwe
-qweqwe
-
-this is test file.vq
-this is test file.hold 
-eqwqwwqwqqw
-this is teeqwqwst file.hold 
-ewqeq
-
-this is test file.hold 
-qwewqe
-this is tqwewqeqest file.hold 
-ewqewq
-
-this is test file.hold 
-eqwewq
-this is teqweqwst file.hold 
-qweqweqweqw
-
-this is test file.hold 
-wewqeqw
-this iqws test file.hold 
-qweqwe
-
-this is test file.hold 
-qwwe
-this is test file.hold 
-eqwe
-
-this is qw file.hold 
-aaa
-
-bbb
-
-ccc
-
-ddd
-
-eee
->>>>>>> insert content to test file
+```
