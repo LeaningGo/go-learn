@@ -1,28 +1,24 @@
 ```go
-// 这里全部都是张三提交的代码。
+// 这是李四提交的代码
 
-func main() {
-	var errorCount int
+func Run() error {
+	klog.InitFlags(nil)
+	pflag.CommandLine.SetNormalizeFunc(cliflag.WordSepNormalizeFunc)
+	pflag.CommandLine.AddGoFlagSet(flag.CommandLine)
 
-	kubectl := cmd.NewKubectlCommand(os.Stdin, ioutil.Discard, ioutil.Discard)
-	errors := cmdsanity.RunCmdChecks(kubectl, cmdsanity.AllCmdChecks, []string{})
-	for _, err := range errors {
-		errorCount++
-		fmt.Fprintf(os.Stderr, "     %d. %s\n", errorCount, err)
-	}
+	pflag.Set("logtostderr", "true")
+	// We do not want these flags to show up in --help
+	// These MarkHidden calls must be after the lines above
+	pflag.CommandLine.MarkHidden("version")
+	pflag.CommandLine.MarkHidden("log-flush-frequency")
+	pflag.CommandLine.MarkHidden("alsologtostderr")
+	pflag.CommandLine.MarkHidden("log-backtrace-at")
+	pflag.CommandLine.MarkHidden("log-dir")
+	pflag.CommandLine.MarkHidden("logtostderr")
+	pflag.CommandLine.MarkHidden("stderrthreshold")
+	pflag.CommandLine.MarkHidden("vmodule")
 
-	errors = cmdsanity.RunGlobalChecks(cmdsanity.AllGlobalChecks)
-	for _, err := range errors {
-		errorCount++
-		fmt.Fprintf(os.Stderr, "     %d. %s\n", errorCount, err)
-	}
-
-	if errorCount > 0 {
-		fmt.Fprintf(os.Stdout, "Found %d errors.\n", errorCount)
-		os.Exit(1)
-	}
-
-	fmt.Fprintln(os.Stdout, "Congrats, CLI looks good!")
+	cmd := cmd.NewKubeadmCommand(os.Stdin, os.Stdout, os.Stderr)
+	return cmd.Execute()
 }
-
 ```
