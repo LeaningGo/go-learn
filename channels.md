@@ -40,8 +40,8 @@ a := make(chan int)
 ```
 上面的代码定义了一个 int channels a
 
-## 从 Channels 发送和接受
-下面给出了从 channels 发送和接受的语法。
+## 从 Channels 发送和接收
+下面给出了从 channels 发送和接收的语法。
 ```go
 data := <- a // read from channel a  
 a <- data // write to channel a  
