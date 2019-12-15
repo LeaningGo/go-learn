@@ -157,7 +157,7 @@ func main() {
 
 在 [`playground`](https://play.golang.org/p/DM00pcBbsu) 上运行。
 
-上面的程序将打印出来：
+上面的程序将打印出：
 
 ```
 width is 0 height is 0  

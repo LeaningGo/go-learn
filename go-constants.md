@@ -120,7 +120,7 @@ func main() {
 
 ## Boolean 常量
 
-布尔常量与字符串常量没有区别。它们是两个类型化常量 `true` 和 `false`。字符串常量的相同规则适用于 booleans，因此我们在此不再重复。以下是解释 booleans 常量的简单程序。
+布尔常量与字符串常量没有区别。它们是两个类型化常量 `true` 和 `false`。字符串常量的相同规则适用于 boolean，因此我们在此不再重复。以下是解释 boolean 常量的简单程序。
 
 ```
 package main

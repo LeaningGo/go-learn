@@ -4,13 +4,13 @@
 
 没有比学习编程语言更好的方法了。让我们继续写下我们的第一个去项目。
 
-我个人建议使用带有 go 扩展的 [Visual Studio](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) 作为IDE。它具有自动不全、代码样式和许多其他功能。
+我个人建议使用带有 go 扩展的 [Visual Studio](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) 作为 IDE。它具有自动补全、代码样式和许多其他功能。
 
 ## 设置 go 工作空间
 
 在开始编写代码之前，我们必须设置 go 工作空间。
 
-对于 `Mac` 或 `Linux`，go 工作空间位于 `$HOME/go` 中。所以让我们继续进行，建立一个目录在 `$HOME` 里面。
+对于 `Mac` 或 `Linux`，go 工作空间位于 `$HOME/go` 中。所以让我们继续进行学习，建立一个目录在 `$HOME` 里面。
 
 对于 `Windows`，工作空间应位于 `C\Users\YourName\go` 中。因此，让我们在 `C\Users\YourName` 中创建 go 目录。
 
@@ -54,7 +54,7 @@ go
 
 上面命令中的 `workspacepath` 应该替换为工作空间的路径（在 windows 中：C:/Users/YourName/go，在 linux 或 Mac 中：`$HOME/go`）
 
-您应该在控制台中看到输出：
+您应该在控制台中看到以下输出：
 ```
 Hello World
 ```

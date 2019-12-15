@@ -2,7 +2,7 @@
 
 switch 是一个条件语句，它计算表达式并将其与可能的匹配列表进行比较，并根据匹配执行代码块。可以将其视为编写多个 `if else` 子句的惯用方式。
 
-让我们从一个简单的示例开始，它将以手指作为输入，并输出该手指的名称 :)。例如，1是拇指，2是食指，等等。
+让我们从一个简单的示例开始，它将以手指作为输入，并输出该手指的名称 :)。例如，1 是拇指，2 是食指，等等。
 ```go
 package main
 
@@ -29,7 +29,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/q4kjm2kpVe) 运行。
 
-在上面的程序中，switch finger 将 finger 的值与每个 case 语句进行比较。从上到下计算用例，并执行与表达式匹配的第一个用例。在本例中，finger 的值为 4，因此打印了Ring。
+在上面的程序中，switch finger 将 finger 的值与每个 case 语句进行比较。从上到下计算用例，并执行与表达式匹配的第一个用例。在本例中，finger 的值为 4，因此打印 Ring。
 
 不允许重复使用相同的常数值。如果你试图运行下面的程序，编译器会报错 `main.go:18:2: duplicate case 4 in switch previous case at tmp/sandbox887814166/main.go:16:7`
 
@@ -90,7 +90,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/Fq7U7SkHe1) 运行。
 
-在上面的程序中 finger  是 8，它不符合任何情况，因此不正确的手指号码被打印出来。不一定要将默认作为 switch 语句中的最后一种情况。它可以出现在 switch 的任何地方。
+在上面的程序中 finger 是 8，它不符合任何情况，因此不正确的手指号码被打印出来。不一定要将默认作为 switch 语句中的最后一种情况。它可以出现在 switch 的任何地方。
 
 你可能还注意到 finger 声明中的一个小变化。它在 switch 本身中声明。switch 可以包含一个可选语句，它在表达式求值之前执行。在这行 switch finger := 8; finger 首先被声明，也在表达式中使用。在这种情况下，finger 的范围仅限于 switch 块。
 
@@ -156,12 +156,11 @@ import (
 )
 
 func number() int {  
-        num := 15 * 5 
-        return num
+    num := 15 * 5 
+    return num
 }
 
 func main() {
-
     switch num := number(); { //num is not a constant
     case num < 50:
         fmt.Printf("%d is lesser than 50\n", num)
@@ -172,12 +171,11 @@ func main() {
     case num < 200:
         fmt.Printf("%d is lesser than 200", num)
     }
-
 }
 ```
 在 [playground](https://play.golang.org/p/svGJAiswQj) 运行。
 
-Switch 和 case 表达式不需要只是常量。它们也可以在运行时进行计算。在上面的程序中，num 被初始化为函数 number() 的返回值。控制进入 switch 内部，并对情况进行计算。`case num < 100:` 为真，程序打印 `75 is lesser than 100`。下一个语句是 fallthrough。遇到 fallthrough 时，控制移动到下一个 case 的第一个语句并打印 `75 is lesser than 200`。程序的输出是：
+switch 和 case 表达式不需要只是常量。它们也可以在运行时进行计算。在上面的程序中，num 被初始化为函数 number() 的返回值。控制进入 switch 内部，并对情况进行计算。`case num < 100:` 为真，程序打印 `75 is lesser than 100`。下一个语句是 fallthrough。遇到 fallthrough 时，控制移动到下一个 case 的第一个语句并打印 `75 is lesser than 200`。程序的输出是：
 ```
 75 is lesser than 100  
 75 is lesser than 200  

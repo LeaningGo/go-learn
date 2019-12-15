@@ -16,7 +16,7 @@
 
 ## main 函数 和 main 包
 
-每个可执行的 go 应用程序必须包含一个 main 函数。这个函数是执行的入口点。主要功能应保留在 main 包中。
+每个可执行的 go 应用程序必须包含一个 main 函数。这个函数是程序执行的入口点。主要功能应保留在 main 包中。
 
 指定特定源文件属于某个包的代码是 `package packagename`。这应该是每个 go 源文件的第一行。
 
@@ -56,8 +56,6 @@ bin
 让我们创建一个自定义包 `rectangle`，该包具有确定矩形的面积和对角线的函数。
 
 **属于包的源文件应该放在单独的文件夹中。使用包的相同名称命名此文件夹是 Go 中的惯例。**
-
-So lets create a folder named rectangle inside the geometry folder. All files inside the rectangle folder should start with the line package rectangle as they all belong to the rectangle package.
 
 让我们在 `geometry ` 文件夹中创建一个名为 `rectangle` 的文件夹。`rectangle ` 文件夹中的所有文件都应该以 `package rectangle` 开始，因为它们都属于 `rectangle ` 包。
 
@@ -228,7 +226,7 @@ func main() {
 
 `main` 包的初始化顺序为：
 
-*  导入的程序包首先被初始化。因此，`rectangle ` 包首先被初始化。
+* 导入的程序包首先被初始化。因此，`rectangle ` 包首先被初始化。
 * 接下来初始化包级别变量 **rectLen** 和 **rectWidth**
 * **init** 函数被调用
 * **main** 函数最后被调用
@@ -243,7 +241,7 @@ area of rectangle 42.00
 diagonal of the rectangle 9.22  
 ```
 
-正如预期的那样，首先调用 `rectangle` 包的 `init` 函数，然后初始化包级别变量 `rectLen` 和 `rectWidth`。接下来调用主包的 `init` 函数。它检查 `rectLen` 和 `rectWidth` 是否小于零，如果条件为 `true`则终止。我们将在单独的教程中详细了解 `if` 语句。现在，您可以假设，如果 `rectLen < 0` 将检查 `rectLen` 是否小于 0，如果是，程序将被终止。我们已经为 `rectWidth` 写了一个类似的条件。在这种情况下，两个条件都为 `false` ，程序执行将继续。最后调用 `main` 函数。
+正如预期的那样，首先调用 `rectangle` 包的 `init` 函数，然后初始化包级别变量 `rectLen` 和 `rectWidth`。接下来调用主包的 `init` 函数。它检查 `rectLen` 和 `rectWidth` 是否小于零，如果条件为 `true` 则终止。我们将在单独的教程中详细了解 `if` 语句。现在，您可以假设，如果 `rectLen < 0` 将检查 `rectLen` 是否小于 0，如果是，程序将被终止。我们已经为 `rectWidth` 写了一个类似的条件。在这种情况下，两个条件都为 `false` ，程序执行将继续。最后调用 `main` 函数。
 
 让我们稍微修改一下该程序，了解 `init` 函数的用法。
 

@@ -18,7 +18,7 @@ func main() {
     fmt.Println(name)
 }
 ```
-在 [playground](https://play.golang.org/p/o9OVDgEMU0) 运行。
+在 [playground](https://play.golang.org/p/o9OVDgEMU0) 上运行。
 
 上面程序的输出是 `Hello World`。
 
@@ -45,7 +45,7 @@ func main() {
     printBytes(name)
 }
 ```
-在 [playground](https://play.golang.org/p/XbJO2b0ZDW) 运行。
+在 [playground](https://play.golang.org/p/XbJO2b0ZDW) 上运行。
 
 在上述程序的第八行中，`len(s)` 返回字符串中的字节数，我们使用 for 循环以十六进制表示法打印这些字节。`％x` 是十六进制的格式说明符。以上程序输出 `48 65 6c 6c 6f 20 57 6f 72 6c 64`。这些是 `Hello World` 的 `Unicode UT8` 编码值。为了更好地理解字符串，需要对 Unicode 和 UTF-8 有基本的了解。我建议阅读 https://naveenr.net/unicode-character-set-and-utf-8-utf-16-utf-32-encoding/ 以了解什么是 `Unicode` 和 `UTF-8`。
 
@@ -78,7 +78,7 @@ func main() {
     printChars(name)
 }
 ```
-在 [playground](https://play.golang.org/p/Jss0HG1q80) 运行。
+在 [playground](https://play.golang.org/p/Jss0HG1q80) 上运行。
 
 在该 `printChars` 函数中，`％c` 格式符说明用于打印字符串的字符。程序输出
 ```
@@ -119,7 +119,7 @@ func main() {
     printChars(name)
 }
 ```
-在 [playground](https://play.golang.org/p/UQOVvRVaFH) 运行。
+在 [playground](https://play.golang.org/p/UQOVvRVaFH) 上运行。
 
 上面程序的输出是
 ```
@@ -167,7 +167,7 @@ func main() {
     printChars(name)
 }
 ```
-在 [playground](https://play.golang.org/p/t4z-f8I-ih) 运行。
+在 [playground](https://play.golang.org/p/t4z-f8I-ih) 上运行。
 
 在上面程序第十四行中，字符串被转换成一个 rune 切片。然后循环并显示字符。这个程序输出
 ```
@@ -201,7 +201,7 @@ func main() {
     printCharsAndBytes(name)
 }
 ```
-在 [playground](https://play.golang.org/p/BPpQ0dZr8W) 运行。
+在 [playground](https://play.golang.org/p/BPpQ0dZr8W) 上运行。
 
 在上述程序第八行中，使用 for range 循环对字符串进行迭代。循环返回 rune 与 rane 一起开始的字节位置。该程序输出
 
@@ -246,7 +246,7 @@ func main() {
     fmt.Println(str)
 }
 ```
-在 [playground](https://play.golang.org/p/BPpQ0dZr8W) 运行。
+在 [playground](https://play.golang.org/p/BPpQ0dZr8W) 上运行。
 
 上面的程序也会输出 `Café`
 
@@ -265,7 +265,7 @@ func main() {
     fmt.Println(str)
 }
 ```
-在 [playground](https://play.golang.org/p/m8wTMOpYJP) 运行。
+在 [playground](https://play.golang.org/p/m8wTMOpYJP) 上运行。
 
 在上面的程序中，runeSlice 包含十六进制字符串 Señor 的 Unicode 代码指针。程序输出 `Señor`。
 
@@ -292,7 +292,7 @@ func main() {
     length(word2)
 }
 ```
-在 [playground](https://play.golang.org/p/m8wTMOpYJP) 运行。
+在 [playground](https://play.golang.org/p/m8wTMOpYJP) 上运行。
 
 上面程序的输出是：
 ```
@@ -319,7 +319,7 @@ func main() {
     fmt.Println(mutate(h))
 }
 ```
-在 [playground](https://play.golang.org/p/m8wTMOpYJP) 运行。
+在 [playground](https://play.golang.org/p/m8wTMOpYJP) 上运行。
 
 在上述程序的第八行中，我们尝试将字符串的第一个字符更改为 'a'。这是不允许的，因为字符串是不可变的，因此程序抛出错误：`main.go:8: cannot assign to s[0]`
 
@@ -341,10 +341,10 @@ func main() {
     fmt.Println(mutate([]rune(h)))
 }
 ```
-在 [playground](https://play.golang.org/p/m8wTMOpYJP) 运行。
+在 [playground](https://play.golang.org/p/m8wTMOpYJP) 上运行。
 
 在上述程序第七行中：mutate 函数接受一个 rune 切片作为参数。然后将切片的第一个元素更改为 'a'，将 rune 转换回字符串并返回。这个程序输出 `aello`
 
-这就是字符串，祝你有美好的一天 :)
+这就是字符串，祝您有美好的一天 :)
 
 ## 下一个教程 - [指针](https://github.com/LeaningGo/go-learn/blob/master/go-pointers.md)

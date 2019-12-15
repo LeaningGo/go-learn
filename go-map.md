@@ -277,7 +277,7 @@ func main() {
 
 }
 ```
-在 [playground](https://play.golang.org/p/OGFl3addq1) 运行。
+在 [playground](https://play.golang.org/p/OGFl3addq1) 上运行。
 
 在上述程序第十四行中，personSalary 被分配给 newPersonSalary。在下一行,  mike 的工资改为 18000 在 newPersonSalary 集合。mike 现在的工资也将是 18000 英镑。程序输出：
 ```go
@@ -306,10 +306,10 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/MALqDyWkcT) 运行。
 
-面的程序将抛出编译错误：**invalid operation: map1 == map2 (map can only be compared to nil).**
+上面的程序将抛出编译错误：**invalid operation: map1 == map2 (map can only be compared to nil).**
 
-检查两个集合是否相等的一种方法是一个一个的比较每个的单个元素。希望你为此编写一个程序并使它起作用 :)
+检查两个集合是否相等的一种方法是一个一个的比较每个的单个元素。希望您为此编写一个程序并使它起作用 :)
 
-集合就是这样。谢谢阅读。祝你有美好的一天。
+集合就是这样。谢谢阅读。祝您有美好的一天。
 
 ## 下一个教程 - [字符串](https://github.com/LeaningGo/go-learn/blob/master/go-strings.md)

@@ -154,7 +154,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/IkugSH1jIt) 运行
 
-在第十三行代码中，`_`标识符用于丢弃参数。
+在第 `area, _ := rectProps(10.8, 5.6)` 代码中，`_` 标识符用于丢弃参数。
 
 我们结束了本章。请留下您宝贵的意见和反馈。谢谢阅读。
 
