@@ -4,7 +4,7 @@
 
 结构体是表示字段集合的用户定义类型。它可以用于将数据分组到单个单元中，而不是将每个单元维护为单独的类型。
 
-例如，一名员工，有姓、名和年龄。将这三个属性分组到单个结构 employee 中是有意义的。
+例如，一名员工，有姓氏、名称和年龄三个属性。将这三个属性组合到单个结构 employee 中是有意义的。
 
 ## 声明结构体
 
@@ -107,7 +107,7 @@ func main() {
 在 [playground](https://play.golang.org/p/TEMFM3oZiq) 运行。
 
 
-在上述程序的第八行中，定义了一个匿名结构变量 emp3。正如我们已经提到的，该结构称为匿名结构，因为它仅创建一个新的 struct 变量 emp3，而没有定义任何新的结构类型。
+在上述程序的第八行中，定义了一个匿名结构变量 emp3。正如我们已经所提到的，该结构称为匿名结构，因为它仅创建一个新的 struct 变量 emp3，而没有定义任何新的结构类型。
 
 程序的输出是：
 ```
@@ -406,7 +406,7 @@ type Person struct {
 }
 ```
 
-在上面的代码片段中，Person 结构体具有一个匿名字段 Address，它是一个结构体。现在的场 Address 结构体，即 city 与 state 被称为提升字段，因为它们可以像直接在 Person 结构本身中声明的那样被访问。
+在上面的代码片段中，Person 结构体具有一个匿名字段 Address，它是一个结构体。现在的地址 Address 结构体，即 city 与 state 被称为提升字段，因为它们可以像直接在 Person 结构本身中声明的那样被访问。
 
 ```go
 package main
@@ -591,6 +591,6 @@ func main() {
 
 在上面的程序中，`image` 结构体类型包含一个类型为 map 的字段数据。map 是不可比较的，因此不能比较 image1 和 image2。如果运行此程序，编译将失败，并带有 `main.go:18: invalid operation: image1 == image2 (struct containing map[int]int cannot be compared)`
 
-Go 中的结构体已经结束了。祝你有美好的一天。
+Go 中的结构体已经结束了。祝您有美好的一天。
 
 ## 下一个教程 - [Methods（方法）](https://github.com/LeaningGo/go-learn/blob/master/go-methods.md)
