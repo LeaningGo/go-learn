@@ -1,8 +1,8 @@
 这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第一部分。
 
-##### step 1：获取 golang 二进制文件 
+##### step 1：获取 golang 二进制文件（科学上网）
 ```
-wget https://storage.googleapis.com/go1.11.4.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
 ```
 第二种途径，直接前往下载
 ```
@@ -11,7 +11,7 @@ https://studygolang.com/dl
 
 ##### step 2：解压并且创建工作目录
 ```
-tar -zxf go1.7.3.linux-amd64.tar.gz -C /usr/local/
+tar -zxf go1.13.5.linux-amd64.tar.gz -C /usr/local/
 mkdir /Golang
 ```
 
@@ -38,10 +38,10 @@ export PATH=$PATH:$GOBIN:$GOPKG:$GOPATH/bin
 source /etc/profile
 ```
 
-##### step 5：验证成功
+##### step 5：验证是否成功
 ```
 root@ubuntumaster001:/home/liudui# go version
-go version go1.11.4 linux/amd64
+go version go1.13.5 linux/amd64
 ```
 
 **安装成功**

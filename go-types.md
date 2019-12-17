@@ -38,7 +38,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/v_W3HQ0MdY) 运行。
 
-在上面的程序中，a 被赋值为 `true`，b被赋值为 `false` 值。
+在上面的程序中，a 被赋值为 `true`，b 被赋值为 `false`。
 
 c 被赋值为 `a && b` 的值。仅当 a 和 b 都为 `true` 时，`&&` 运算符才返回 `true`。所以在这种情况下 c 是 `false`。
 
@@ -70,7 +70,7 @@ d: true
 
 **int:** 表示 32 位或 64 位整数，具体取决于底层平台。通常应该使用 `int` 来表示整数，除非需要使用特定大小的整数。
 **大小:** 32 位系统中的 32 bits 和 64 位系统中的 64 bits 
-**范围:** 32 位系统中的 -2147483648 ~ 2147483647，64 位系统中的 -9223372036854775808到 9223372036854775807
+**范围:** 32 位系统中的 -2147483648 ~ 2147483647，64 位系统中的 -9223372036854775808 到 9223372036854775807
 
 ```
 package main
@@ -174,7 +174,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/upwUCprT-j) 运行。
 
-a 和 b 的类型是从分配给它们的值推断出来的。在本例中，a 和 b的类型为 `float64`。(`float64` 是浮点值的默认类型)。我们把 a 和 b 相加，并把它赋给一个变量 `sum`。我们从 a 中减去 b 并将其赋值给 `diff`，然后输出 `sum` 和 `diff`。用 `no1` 和 `no2` 也做了类似的计算。以上程序将打印出来
+a 和 b 的类型是从分配给它们的值推断出来的。在本例中，a 和 b 的类型为 `float64`。(`float64` 是浮点值的默认类型)。我们把 a 和 b 相加，并把它赋给一个变量 `sum`。我们从 a 中减去 b 并将其赋值给 `diff`，然后输出 `sum` 和 `diff`。用 `no1` 和 `no2` 也做了类似的计算。以上程序将打印出
 
 ```
 type of a float64 b float64  
@@ -259,7 +259,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/CI6phwSVel) 运行。
 
-在上面的程序中，首先分配字符串 **"Naveen"**，最后分配字符串 **"Ramanathan"**。字符串可以使用  `+` 运算符连接。`name` 的值被赋给第一个连接到后面跟着一个空格的值。上面的程序将输出 `My name is Naveen Ramanathan`。
+在上面的程序中，首先分配字符串 **"Naveen"**，最后分配字符串 **"Ramanathan"**。字符串可以使用 `+` 运算符连接。`name` 的值被赋给第一个连接到后面跟着一个空格的值。上面的程序将输出 `My name is Naveen Ramanathan`。
 
 还可以对字符串执行更多的操作。我们将在单独的教程中讨论这些。
 
@@ -286,7 +286,7 @@ func main() {
 
 上面的代码在 `C` 语言中是完全合法的。但在 `go` 中，这是行不通的。i 的类型是 int， j 的类型是 float64。我们试图添加两个不同类型的数字，这是不允许的。当你运行程序时，你会得到 `main.go:10: invalid operation: i + j (mismatched types int and float64)`
 
-为了修正这个错误，i 和 j 应该是同一类型的。让我们把 j 转换成 `int. T(v) ` 是把值 v 转换成类型 T 的语法。
+为了修正这个错误，i 和 j 应该是同一类型的。让我们把 j 转换成 `int.T(v) ` 是把值 v 转换成类型 T 的语法。
 
 ```
 package main

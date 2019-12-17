@@ -74,7 +74,7 @@ func main() {
 
 在 [playground](https://play.golang.org/p/_X9q4MWr4s) 上运行
 
-在上面的程序 `num` 中 `if` 声明了初始化。需要注意的一件事是，`num` 仅可从 `if` 和内部访问 `else`。即：num 范围仅限于 `if else` 块。如果尝试 `num` 从 `if` 或外部进行访问` else`，编译器则会抛出错误。
+在上面的程序 `num` 中 `if` 声明了初始化。需要注意的一件事是，`num` 仅可从 `if` 和内部访问 `else`。即：num 范围仅限于 `if else` 块。如果尝试 `num` 从 `if` 或外部进行访问 `else`，编译器则会抛出错误。
 
 让我们再编写一个使用的程序 `else if`。
 

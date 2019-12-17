@@ -81,7 +81,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/AdPH0kXRly) 运行。
 
-在上面的程序中，第八行。`a := [3]int{12}` 声明了一个长度为 3 的数组，但是只提供了一个值 12 。其余 2 个元素自动赋值为 0。程序将输出 [12 0 0]
+在上面的程序中,`a := [3]int{12}` 声明了一个长度为 3 的数组，但是只提供了一个值 12 。其余 2 个元素自动赋值为 0。程序将输出 [12 0 0]
 
 你甚至可以忽略声明中数组的长度，并将其替换为 `...`，让编译器为你找到长度。例如：
 ```go
@@ -133,7 +133,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/-ncGk1mqPd) 运行。
 
-在上面的程序中，第七行 a 的一个副本被分配给 b。b 的第一个元素改为 Singapore。这将不会映射在原始数组 a 中。程序将输出：
+在上面的程序中，`b := a` `b[0] = "Singapore"` a 的一个副本被分配给 b。b 的第一个元素改为 Singapore。这将不会映射在原始数组 a 中。程序将输出：
 
 ```
 a is [USA China India Germany France]  
@@ -160,7 +160,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/-ncGk1mqPd) 运行。
 
-在上面的程序中第十三行。数组 `num` 实际上是通过值传递给函数 `changeLocal` 的，因此不会因为函数调用而更改。这个程序将输出：
+在上面的程序中 `changeLocal(num)`。数组 `num` 实际上是通过值传递给函数 `changeLocal` 的，因此不会因为函数调用而更改。这个程序将输出：
 ```
 before passing to function  [5 6 7 8 8]  
 inside function  [55 6 7 8 8]  
@@ -177,7 +177,6 @@ import "fmt"
 func main() {  
     a := [...]float64{67.7, 89.8, 21, 78}
     fmt.Println("length of a is",len(a))
-
 }
 ```
 
@@ -224,7 +223,7 @@ func main() {
 }
 ```
 在 [playground](https://play.golang.org/p/-ncGk1mqPd) 运行。
-第八行 `i, v := range a`，上面的程序是 for 循环的 range 形式。它将同时返回索引和该索引处的值。我们打印这些值，并计算数组 a 中所有元素的和。程序的输出是：
+程序 `i, v := range a`，上面的程序是 for 循环的 range 形式。它将同时返回索引和该索引处的值。我们打印这些值，并计算数组 a 中所有元素的和。程序的输出是：
 ```
 0 the element of a is 67.70  
 1 the element of a is 89.80  
@@ -281,9 +280,9 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/-ncGk1mqPd) 运行。
 
-在上面的程序中，第十七行。一个二维字符串数组 a 已经用简短的语法声明。第二十行末尾的逗号是必要的。这是因为 lexer 根据简单的规则自动插入分号。如果您有兴趣了解更多关于为什么需要这个请阅读 https://golang.org/doc/effective_go.html#。
+在上面的程序中，一个二维字符串数组 a 已经用简短的语法声明。`{"pigeon", "peacock"}` 末尾的逗号是必要的。这是因为 lexer 根据简单的规则自动插入分号。如果您有兴趣了解更多关于为什么需要这个请阅读 https://golang.org/doc/effective_go.html#。
 
-另一个 2d 数组 b 在第二十三行中声明。每个索引一个一个地添加字符串。这是另一种初始化 2d 数组的方法。
+另一个 2d 数组 b 在 `var b [3][2]string` 中声明。每个索引一个一个地添加字符串。这是另一种初始化 2d 数组的方法。
 
 第一行中的 printarray 函数。第七行使用两个 `for range` 循环来打印 `2d` 数组的内容。以上程序的输出为：
 ```
@@ -487,7 +486,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/M4OqxzerxN) 运行。
 
-在上述程序中，cars 的初始容量为3。我们在第十行的 cars 上增加了一个新元素并再次将 `append(cars, "Toyota")` 映射给 cars。现在 cars 的容量增加了一倍，变成了6 辆。以上程序的输出为：
+在上述程序中，cars 的初始容量为 3。我们在第十行的 cars 上增加了一个新元素并再次将 `append(cars, "Toyota")` 映射给 cars。现在 cars 的容量增加了一倍，变成了 6 辆。以上程序的输出为：
 ```
 cars: [Ferrari Honda Ford] has old length 3 and capacity 3  
 cars: [Ferrari Honda Ford Toyota] has new length 4 and capacity 6  
@@ -563,7 +562,6 @@ func subtactOne(numbers []int) {
     for i := range numbers {
         numbers[i] -= 2
     }
-
 }
 func main() {  
     nos := []int{8, 7, 6}
@@ -640,7 +638,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/35ayYBhcDE) 运行。
 
-第九行。在上面的程序中，`neededCountries:= countries[:len(countries)-2]` 创建了一个包含后两个元素的 countries 切片。第十一行程序将 neededCountries 复制到 `countriesCpy `，并在下一行的函数中返回。现在 countries 数组可以被垃圾收集，因为需要的 countries  不再被引用。
+第九行。在上面的程序中，`neededCountries:= countries[:len(countries)-2]` 创建了一个包含后两个元素的 countries 切片。第十一行程序将 neededCountries 复制到 `countriesCpy `，并在下一行的函数中返回。现在 countries 数组可以被垃圾收集，因为需要的 countries 不再被引用。
 
 这就是数组和切片。感谢你的阅读。请留下宝贵的反馈和意见。
 
