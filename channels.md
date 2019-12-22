@@ -6,11 +6,11 @@
 可以将 channels 视为使用 Goroutines 进行通信的管道。与水在管道中从一端流到另一端的方式类似。可以使用 channels 从一端发送数据并从另一端接收数据。
 
 ## Channels 公告
-每个 channels 都有与之关联的类型。此类型是允许 channels 传输的数据类型。不允许使用该 channels 传输其他类型
+每个 channels 都有与之关联的类型。此类型是允许 channels 传输的数据类型。不允许使用该 channels 传输其他类型。
 
 `chan T` T 是 channels 的类型
 
-channels  的零值为 nil，nil channels 没有任何用处。因此必须使用 male 类似于[集合和切片](go-arrays-and-slices.md)的方法来定义 channels。
+channels  的零值为 nil，nil channels 没有任何用处。因此必须使用 make 类似于[集合和切片](go-arrays-and-slices.md)的方法来定义 channels。
 
 让我们编写声明 channels 的代码
 ```go
@@ -53,7 +53,7 @@ a <- data // write to channel a
 在第二行，箭头指向a，因此我们将数据写 channels a。
 
 ## 默认情况下发送和接收数据将被阻塞
-默认情况下，发送和接收到 channels 将处于阻塞状态。这是什么意思？当数据发送到 channels 时，控制将在 send 语句中被阻塞。直到其他 Goroutine 从该 channels 读取数据为止。同样，当从 channels 读取数据时，将阻塞读取。知道某些 Goroutine 将数据写入该 channels 为止。
+默认情况下，发送和接收到 channels 将处于阻塞状态。这是什么意思？当数据发送到 channels 时，控制将在 send 语句中被阻塞。直到其他 Goroutine 从该 channels 读取数据为止。同样，当从 channels 读取数据时，将阻塞读取。直到某些 Goroutine 将数据写入该 channels 为止。
 
 channels 的这个属性将帮助 Goroutines 有效通信。而无需使用其他语言很常见的显示锁或者常见变量。
 
@@ -245,7 +245,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/PRKHxM-iRK) 上运行。
 
-在上面的程序中，我们在第十行之创建了发送 channels sendch，当箭头指向 channels 时，chan<- int 表示是发送 channels，我们在第十二行尝试着从一个只发送数据的 channels 中接收数据这是不允许的，当程序运行时，编译器会抛出错误。
+在上面的程序中，我们在第十行创建了发送 channels sendch，当箭头指向 channels 时，chan <- int 表示是发送 channels，我们在第十二行尝试着从一个只发送数据的 channels 中接收数据这是不允许的，当程序运行时，编译器会抛出错误。
 
 ```
 main.go:11: invalid operation: <-sendch (receive from send-only type chan<- int)
@@ -272,7 +272,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/aqi_rJ1U8j) 上运行。
 
-在上面程序的第十行中，我们创建一个双向 channels chnl。它在第十一行中中作为参数传递给 sendData Goroutine。sendData 函数在参数 `sendch chan<- int` 中将这个 channels 转换为第五行中的一个只发送的 channels。然后在第十二行接收 channels 这个程序将打印 10 作为输出。
+在上面程序的第十行中，我们创建一个双向 channels chnl。它在第十一行中作为参数传递给 sendData Goroutine。sendData 函数在参数 `sendch chan<- int` 中将这个 channels 转换为第五行中的一个只发送的 channels。然后在第十二行接收 channels 这个程序将打印 10 作为输出。
 
 ## 关闭 Channels 和用于 Channels 上的 range 循环
 
@@ -371,7 +371,7 @@ Received  9
 
 可以使用 for range 循环重写另一个 channel 示例部分中的程序，使其具有更多的代码可重用性。
 
-如果你仔细看一下这个程序，你会注意到在 calcSquares 函数和 calcCubes 函数中都重复了找到数字的单个数字的代码。我们将把代码移动到它自己的函数中，并发调用它。
+如果您仔细看一下这个程序，您会注意到在 calcSquares 函数和 calcCubes 函数中都重复了找到数字的单个数字的代码。我们将把代码移动到它自己的函数中，并发调用它。
 
 ```go
 package main
@@ -415,7 +415,7 @@ func main() {
     go calcSquares(number, sqrch)
     go calcCubes(number, cubech)
     squares, cubes := <-sqrch, <-cubech
-    fmt.Println("Final output", squares+cubes)
+    fmt.Println("Final output", squares + cubes)
 }
 ```
 在 [playground](https://play.golang.org/p/oL86W9Ui03) 上运行。
@@ -426,7 +426,7 @@ func main() {
 Final output 1536  
 ```
 
-这里是本教程的结尾。channels 中很少有其他概念，如缓冲 channels、工作池和 select。我们将在单独的教程中讨论它们。感谢你的阅读。祝你有美好的一天。:)
+这里是本教程的结尾。channels 中很少有其他概念，如缓冲 channels、工作池和 select。我们将在单独的教程中讨论它们。感谢您的阅读。祝您有美好的一天。:)
 
 ## 下一个教程 - [缓冲 Channels 和 工作池（Worker Pools）](buffered-channels-worker-pools.md)
 

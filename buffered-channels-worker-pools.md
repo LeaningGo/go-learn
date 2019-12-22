@@ -1,4 +1,3 @@
-
 这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第二十三部分。
 
 我们在[前一篇教程](channels.md)中讨论的所有 channels 基本上都都是没有缓冲的。就像我们在 channels 教程中详细讨论的，发送和接收到非缓冲 channels 是阻塞的。
@@ -10,9 +9,9 @@
 ch := make(chan type, capacity)  
 ```
 
-以上语法中的 `capacity` 应该大于0，这样 channels 就具有缓冲区。未缓冲 channels 的容量默认为 0，因此在前面的教程中创建 channels 时我们省略了 `capacity` 参数。
+以上语法中的 `capacity` 应该大于 0，这样 channels 就具有缓冲区。未缓冲 channels 的容量默认为 0，因此在前面的教程中创建 channels 时我们省略了 `capacity` 参数。
 
-让我们编写一些代码，并创建一个缓冲 chennels 的
+让我们编写一些代码，并创建一个带有缓冲 chennels 的示例。
 
 ## 示例
 ```
@@ -77,7 +76,7 @@ successfully wrote 1 to ch
 ```
 ps：为什么只打印这两行，因为 channels 的容量为 2，容量满了之后立即进入阻塞状态。
 
-在打印上述两行之后，write Goroutine 中对 ch channels 的写入操作将被阻塞，直到有人从 ch channels 读取数据。由于 main Goroutine 在开始从 channels 读取之前会休眠2秒钟，所以在接下来的 2 秒钟内程序不会打印任何内容。main Goroutine 在 2 秒后唤醒，并开始使用第十九行中的 for range 循环从 ch channels 读取数据。打印读值，然后再次休眠 2 秒，这个循环一直持续到 ch 关闭。程序会在 2 秒后打印以下几行
+在打印上述两行之后，write Goroutine 中对 ch channels 的写入操作将被阻塞，直到有人从 ch channels 读取数据。由于 main Goroutine 在开始从 channels 读取之前会休眠 2 秒钟，所以在接下来的 2 秒钟内程序不会打印任何内容。main Goroutine 在 2 秒后唤醒，并开始使用第十九行中的 for range 循环从 ch channels 读取数据。打印读值，然后再次休眠 2 秒，这个循环一直持续到 ch 关闭。程序会在 2 秒后打印以下几行
 ```
 read value 0 from ch  
 successfully wrote 2 to ch
@@ -174,7 +173,7 @@ func process(i int, wg *sync.WaitGroup) {
     wg.Done()
 }
 
-func main() {  
+func main() {
     no := 3
     var wg sync.WaitGroup
     for i := 0; i < no; i++ {
@@ -187,13 +186,13 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/CZNtu8ktQh) 上运行程序。
 
-[WaitGroup](https://golang.org/pkg/sync/#WaitGroup) 是一个结构类型，我们在第十八行中创建了一个类型为 WaitGroup 的零值变量。WaitGroup 的工作方式是使用计数器（counter）。当我们在 WaitGroup 上调用 Add 并给它传递一个 int 值时，WaitGroup 的计数器会随着传递给 Add 的值的增加而增加。Wait() 方法阻塞调用它的 Goroutine，直到计数器变为零。
+[WaitGroup](https://golang.org/pkg/sync/#WaitGroup) 是一个结构体类型，我们在第十八行中创建了一个类型为 WaitGroup 的零值变量。WaitGroup 的工作方式是使用计数器（counter）。当我们在 WaitGroup 上调用 Add 并给它传递一个 int 值时，WaitGroup 的计数器会随着传递给 Add 的值的增加而增加。Wait() 方法阻塞调用它的 Goroutine，直到计数器变为零。
 
 在上面的程序中，我们在 for 循环中调用 wg.Add(1)，该循环迭代 3 次。所以现在计数器变成了 3。for 循环还生成 3 个进程 Goroutines，然后在二十三行中调用 wg.Wait() 使 main Goroutine 等待，直到计数器变为 0。在第十三行的进程 Goroutine 中，对 wg.Done() 的调用降低了计数器。一旦 3 个衍生的 Goroutine 执行完毕，即 wg.Done() 被调用三次，计数器将变为零，mian Goroutine 将被解除阻塞。
 
 在二十一行传递 wg 的地址是很重要的。如果没有传递地址，那么每个 Goroutine 将有自己的 WaitGroup 副本，当它们完成执行时，main 将不会收到通知。
 
-上面程序的输出时
+上面程序的输出是
 ```
 started Goroutine  2  
 started Goroutine  0  
@@ -204,7 +203,7 @@ Goroutine 1 ended
 All go routines finished executing  
 ```
 
-你的输出可能会与我不同，因为 Goroutine 的执行顺序会是不一致的。
+您的输出可能会与我不同，因为 Goroutine 的执行顺序会是不一致的。
 
 ## 工作池实现（Worker Pool Implementation）
 缓冲 channels 的重要用途之一就是[工作池](https://en.wikipedia.org/wiki/Thread_pool)的实现。
@@ -231,7 +230,7 @@ type Result struct {
     sumofdigits int
 }
 ```
-每一个 `Job` 结构体都有一个 id 和 randomon 必须为其计算各个数字的总和
+每一个 `Job` 结构体都有一个 id 和 randomon 必须为其计算各个数字的总和。
 
 Result 结构有一个 `Job` 字段，它在 sumofdigits 字段中保存结果(单个数字的和)。
 
@@ -344,7 +343,7 @@ func main() {
 
 最后，通过调用 createWorkerPool 函数创建一个包含 10 个 worker goroutine 的池，然后 main 在 done channels 上等待打印所有结果。
 
-这是完整的程序供你参考。我也导入了必要的包。
+这是完整的程序供您参考。我也导入了必要的包。
 
 ```go
 package main
@@ -425,7 +424,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/au5islUIbx) 上运行程序。
 
-请在你的本地机器上运行这个程序，获得更准确的总时间计算。
+请在您的本地机器上运行这个程序，获得更准确的总时间计算。
 
 这个程序会打印
 
@@ -437,7 +436,7 @@ Job id 9, input random no 150, sum of digits 6
 total time taken  20.01081009 seconds  
 ```
 
-与这 100 个 job 对应的总共 100 行将被打印出来，最后程序运行所需的总时间将打印在最后一行。你的输出将不同于我的，因为 Goroutines 可以以任何顺序运行，总的时间也会根据硬件的不同而不同。在我的例子中，程序完成大约需要 20 秒。
+与这 100 个 job 对应的总共 100 行将被打印出来，最后程序运行所需的总时间将打印在最后一行。您的输出将不同于我的，因为 Goroutines 可以以任何顺序运行，总的时间也会根据硬件的不同而不同。在我的例子中，程序完成大约需要 20 秒。
 
 现在让我们增加 noOfWorkers 的 main 函数到 20。我们使 workers  数增加了一倍。由于 workers Goroutines 增加了（精确地说是增加了一倍），程序完成所需的总时间应该减少了（精确地说是减少了一半）。我的情况是 10.004364685 秒，程序打印出来
 
@@ -446,9 +445,9 @@ total time taken  20.01081009 seconds
 total time taken  10.004364685 seconds  
 ```
 
-现在我们可以理解，随着工作总数的增加，完成工作的总时间减少了。我将其作为练习留给你使用 `noOfJobs` 和 `noOfWorkers` 在 `main` 函数中使用不同的值并分析结果。
+现在我们可以理解，随着工作总数的增加，完成工作的总时间减少了。我将其作为练习留给您使用 `noOfJobs` 和 `noOfWorkers` 在 `main` 函数中使用不同的值并分析结果。
 
-这就结束了本教程。祝你有美好的一天。:)
+这就结束了本教程。祝您有美好的一天。:)
 
 ## 下一个教程 - [select](select.md)
 

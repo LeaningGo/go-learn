@@ -1,4 +1,3 @@
-
 这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第二十四部分。
 
 ## 什么是 select？
@@ -87,7 +86,7 @@ func main() {
 
 在上面的程序中，`process` 函数在地八行休眠了 10500 毫秒（10.5 秒）并稍后写入 `process successful` 到 ch channel。这个函数在程序的第十五行被并发调用。
 
-在并发地调用进程 Goroutine 之后，在 main Goroutine 中启动一个 infinite for 循环。无限循环在每次迭代开始时休眠 1000 毫秒（1秒），然后执行 select 操作。在前 10500 毫秒期间，select 语句的第一个 `case v:= <-ch:` 将不会准备好，因为进程 Goroutine 将在 10500 毫秒之后才写入 ch 通道。因此，默认情况将在此期间执行，程序将打印 `no value received` 10次。
+在并发地调用进程 Goroutine 之后，在 main Goroutine 中启动一个 infinite for 循环。无限循环在每次迭代开始时休眠 1000 毫秒（1秒），然后执行 select 操作。在前 10500 毫秒期间，select 语句的第一个 `case v:= <-ch:` 将不会准备好，因为进程 Goroutine 将在 10500 毫秒之后才写入 ch 通道。因此，默认情况将在此期间执行，程序将打印 `no value received` 10 次。
 
 在 10.5 秒之后，进程 Goroutine 在第十行内将 `"process successful"` 写入 ch。现在，select 语句的第一个 case 将被执行，程序将打印接收到的值: `process successful`，然后它将终止。这个程序将输出
 ```
@@ -169,7 +168,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/IKmGpN61m1) 上运行。
 
-在上面的程序中，ch 是 nil，我们试着在第八行的 selec t语句中读取 ch。如果不存在默认情况，select 将会被永久阻塞并导致死锁。因为 select 里面有一个默认的 case，它会被执行，程序会打印
+在上面的程序中，ch 是 nil，我们试着在第八行的 select 语句中读取 ch。如果不存在默认情况，select 将会被永久阻塞并导致死锁。因为 select 里面有一个默认的 case，它会被执行，程序会打印
 ```
 default case executed
 ```
@@ -208,9 +207,9 @@ func main() {
 在 [playground](https://play.golang.org/p/vJ6VhVl9YY) 上运行。
 
 
-在上面的程序中，server1 和 server2 go routines 分别在十八行和十九行中调用。然后 mian 程序在第二十行秒内休眠 1 秒。当控制在二十一行中到达 select 语句时，server1 将从 server1 写入 output1 chennel，而 server2 将从 server2 写入 output2 channel，因此 select 语句的两种情况都可以执行了。如果你多次运行这个程序，输出将在 server1 或 server2 之间变化，这取决于在随机选择的是哪种情况。
+在上面的程序中，server1 和 server2 go routines 分别在十八行和十九行中调用。然后 mian 程序在第二十行秒内休眠 1 秒。当控制在二十一行中到达 select 语句时，server1 将从 server1 写入 output1 chennel，而 server2 将从 server2 写入 output2 channel，因此 select 语句的两种情况都可以执行了。如果您多次运行这个程序，输出将在 server1 或 server2 之间变化，这取决于在随机选择的是哪种情况。
 
-请在你的本地系统运行这个程序，查看随机输出。如果这个程序在 playground 上面运行，它会打印相同的输出，因为 playground 的确定的。
+请在您的本地系统运行这个程序，查看随机输出。如果这个程序在 playground 上面运行，它会打印相同的输出，因为 playground 是确定的。
 
 ## 问题 - 空 select（Empty select）
 ```go
@@ -219,7 +218,7 @@ func main() {
     select {}
 }
 ```
-你认为上述程序的输出会是什么?
+您认为上述程序的输出会是什么?
 
 我们知道 select 语句会阻塞，直到它的一个 case 被执行。在这种情况下，select 语句没有任何 case，因此它将永远阻塞，导致死锁。这个程序会产生以下输出
 ```go
@@ -230,6 +229,6 @@ main.main()
     /tmp/sandbox299546399/main.go:4 +0x20
 ```
 
-本章节就这样结束了。祝你有美好的一天。:)
+本章节就这样结束了。祝您有美好的一天。:)
 
 ## 下一个教程 - [互斥锁（Mutex）](mutex.md)

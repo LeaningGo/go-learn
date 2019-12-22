@@ -42,7 +42,7 @@ func main() {
 
 }
 ```
-在 [playground](https://play.golang.org/p/F-T3S_wNNB) 运行程序。
+在 [playground](https://play.golang.org/p/F-T3S_wNNB) 上运行程序。
 
 在上面程序第八行中，创建了一个名为 VowelsFinder 的接口类型，它有一个方法 FindVowels() []rune。
 
@@ -52,7 +52,7 @@ func main() {
 
 在第二十八行，我们将 MyString 类型的 name 赋给 v 类型的 VowelsFinder。这是可能的，因为 MyString 实现了 VowelsFinder。下一行调用 MyString 类型上的 FindVowels 方法，并打印字符串中所有的元音 Sam Anderson。这个程序输出的 `Vowels are [a e o]`
 
-恭喜！你已经创建并实现了第一个接口。
+恭喜！您已经创建并实现了第一个接口。
 
 ## 接口的实际使用
 上面的例子教会了我们如何创建和实现接口，但是它并没有真正展示接口的实际使用。如果我们在上面的程序中使用 name.FindVowels()，而不是 v.FindVowels()，那么它也可以工作，并且不需要使用创建的接口。
@@ -114,11 +114,11 @@ func main() {
 
 }
 ```
-在 [playground](https://play.golang.org/p/5t6GgQ2TSU) 运行程序。
+在 [playground](https://play.golang.org/p/5t6GgQ2TSU) 上运行程序。
 
 上述程序的第七行使用单个方法 CalculateSalary() int 声明 SalaryCalculator 接口类型。
 
-我们公司有两种员工，一种是 `Permanent` 员工，另一种是第十一行和第十七行结构体中定义的 `Contract` 员工。`Permanent` 员工的工资是基本工资和基本工资的总和，而 `Contract` 员工的工资是基本工资。这分别用第二十三行和第二十八行中相应的计算方法表示。通过声明这个方法，Permanent 和 Contract 现在都实现了 SalaryCalculator 接口。
+我们公司有两种员工，一种是 `Permanent` 员工，另一种是第十一行和第十七行结构体中定义的 `Contract` 员工。`Permanent` 员工的工资是基本工资和绩效工资的总和，而 `Contract` 员工的工资是基本工资。这分别用第二十三行和第二十八行中相应的计算方法表示。通过声明这个方法，Permanent 和 Contract 现在都实现了 SalaryCalculator 接口。
 
 第三十六行中声明的 totalExpense 函数表达了使用接口的美妙之处。该方法以 SalaryCalculator 接口作为参数。在第四十九行中，我们将包含 Permanent 类型和 Contract 类型的切片传递给 totalExpense 函数。totalExpense 函数通过调用对应类型的 CalculateSalary 方法来计算费用。这是在三十九行完成的。
 
@@ -160,7 +160,7 @@ func main() {
     t.Test()
 }
 ```
-在 [playground](https://play.golang.org/p/ZpQhhhs2920) 运行程序。
+在 [playground](https://play.golang.org/p/ZpQhhhs2920) 上运行程序。
 
 Tester 接口有一个方法 Test()，而 MyFloat 类型实现了那个接口。第二十四行我们将 MyFloat 类型的变量 f 赋给 t, t 是 Tester 类型。现在 t 的具体类型是 MyFloat, t 的值是 89.7。在第十七行，打印接口的值和具体类型。这个程序输出
 
@@ -197,7 +197,7 @@ func main() {
     describe(strt)
 }
 ```
-在 [playground](https://play.golang.org/p/Fm5KescoJb) 运行程序。
+在 [playground](https://play.golang.org/p/Fm5KescoJb) 上运行程序。
 
 在上面的程序第七行中，describe(i interface{}) 函数接受一个空接口作为参数，因此它可以传递任何类型。
 
@@ -211,7 +211,7 @@ Type = struct { name string }, value = {Naveen R}
 ## 类型断言
 使用类型断言提取接口的基础值。
 
-**i.(T)** 是用来获取具体类型为T的接口i的底层值的语法。
+**i.(T)** 是用来获取具体类型为 T 的接口 i 的底层值的语法。
 
 一个程序是值得😀一千字。让我们为类型断言编写一个。
 
@@ -231,7 +231,7 @@ func main() {
     assert(s)
 }
 ```
-在 [playground](https://play.golang.org/p/YstKXEeSBL) 运行程序。
+在 [playground](https://play.golang.org/p/YstKXEeSBL) 上运行程序。
 
 
 第十二行中的 s 的具体类型是 int。我们使用第八行中的 i.(int) 语法来获取 i 的底层 int 值。这个程序打印 56。
@@ -254,7 +254,7 @@ func main() {
     assert(s)
 }
 ```
-在 [playground](https://play.golang.org/p/88KflSceHK) 运行程序。
+在 [playground](https://play.golang.org/p/88KflSceHK) 上运行程序。
 
 在上面的程序中，我们将具体类型 string 的 s 传递给 assert 函数，该函数试图从中提取一个 int 值。程序将对消息感到恐慌: `panic: interface conversion: interface {} is string, not int`
 
@@ -285,9 +285,9 @@ func main() {
     assert(i)
 }
 ```
-在 [playground](https://play.golang.org/p/0sB-KlVw8A) 运行程序。
+在 [playground](https://play.golang.org/p/0sB-KlVw8A) 上运行程序。
 
-当 Steven Paul 被传递给 assert 函数时，ok 将为 false，因为 i 的具体类型不是 int，而 v 的值为 0，也就是 int 的 0 值。
+当 "Steven Paul" 被传递给 assert 函数时，ok 将为 false，因为 i 的具体类型不是 int，而 v 的值为 0，也就是 int 的 0 值。
 
 ```go
 56 true  
@@ -321,7 +321,7 @@ func main() {
     findType(89.98)
 }
 ```
-在 [playground](https://play.golang.org/p/XYPDwOvoCh) 运行程序。
+在 [playground](https://play.golang.org/p/XYPDwOvoCh) 上运行程序。
 
 在上面程序的第八行中 switch i.(type) 指定一个类型 switch。每个 case 语句都将 i 的具体类型与特定类型进行比较。如果任何大小写匹配，则打印相应的语句。这个程序输出
 
@@ -372,9 +372,9 @@ func main() {
     findType(p)
 }
 ```
-在 [playground](https://play.golang.org/p/o6aHzIz4wC) 运行程序。
+在 [playground](https://play.golang.org/p/o6aHzIz4wC) 上运行程序。
 
-在上面的程序中，Person 结构实现了 Describer 接口。在十九行中的 case 语句中，v 与 Describer 接口类型相比较。p 实现了 descripber，因此满足了这种情况，当控件在第三十二行中碰到 findType(p) 时，调用 Describe() 方法。
+在上面的程序中，Person 结构体实现了 Describer 接口。在十九行中的 case 语句中，v 与 Describer 接口类型相比较。p 实现了 descripber，因此满足了这种情况，当控件在第三十二行中碰到 findType(p) 时，调用 Describe() 方法。
 
 上面的输出是：
 
@@ -383,6 +383,6 @@ unknown type
 Naveen R is 25 years old  
 ```
 
-这就到了接口第一部分的结尾，我们将在第二部分继续讨论接口。祝你有美好的一天。
+这就到了接口第一部分的结尾，我们将在第二部分继续讨论接口。祝您有美好的一天。
 
 ## 下一教程 - [接口 II](https://github.com/LeaningGo/go-learn/blob/master/interface%20II.md)
