@@ -1,4 +1,3 @@
-
 这里是 [golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十七部分。
 
 ## 入门
@@ -54,7 +53,7 @@ func main() {
 上面程序的输出是 `Salary of Sam Adolf is $5000`
 
 ## 方法 VS 函数
-可以只使用函数重写上面的程序，而不使用方法。
+可以使用函数重写上面的程序，而不使用方法。
 
 ```go
 package main
@@ -87,7 +86,7 @@ func main() {
 ```
 在 [playground](https://play.golang.org/p/dFwObgCUU0) 上运行程序。
 
-在上面的程序中，displaySalary 方法转换为函数，并将 Employeestruct 作为参数传递给它。该程序还产生完全相同的输出 `Salary of Sam Adolf is $5000`。
+在上面的程序中，displaySalary 方法转换为函数，并将 Employee struct 作为参数传递给它。该程序还产生完全相同的输出 `Salary of Sam Adolf is $5000`。
 
 那么为什么我们可以使用函数编写相同的程序时就拥有方法呢？这有两个原因。让我们一一看一下。
 
@@ -348,7 +347,7 @@ func main() {
 
 在第二十五行，我们调用带有值参数 area(r) 的 area 函数，它会起作用。类似地，我们使用一个值接收器调用 area 方法 r.area()，这也可以。
 
-我们在第二十八行中创建一个指向 r 的指针 p，如果我们试图把这个指针传递给只接受一个值的函数去，编译器会报错。我已经注释了第三十三行。如果你取消注释这行，那么编译器将抛出错误编译错误，**compilation error, cannot use p (type *rectangle) as type rectangle in argument to area**。这和预期的一样。
+我们在第二十八行中创建一个指向 r 的指针 p，如果我们试图把这个指针传递给只接受一个值的函数去，编译器会报错。我已经注释了第三十三行。如果您取消注释这行，那么编译器将抛出错误编译错误，**compilation error, cannot use p (type *rectangle) as type rectangle in argument to area**。这和预期的一样。
 
 现在到了棘手的部分，第三十五行代码 p.area( ) 调用方法，该方法接受使用指针接收器 p 的值接收。这是完全有效的。原因是 p.area() 将被 Go 解释为 (*p).area() ，因为 area 有一个值接收器。
 
@@ -435,8 +434,6 @@ func main() {
 
 在上面程序的第三行中，我们试图在内置的 int 类型上添加一个名为 add 的方法，这是不允许的，因为 add 方法的定义和 int 类型的定义不在同一个包中。此程序将抛出编译错误，**cannot define new methods on non-local type int**
 
-使其工作的方法是为内置类型int创建一个类型别名，然后用这个类型别名创建一个方法作为接收者。
-
 使其工作的方法是为内置类型 int 创建一个类型别名，然后用这个类型别名创建一个方法作为接收者。
 
 ```go
@@ -463,7 +460,7 @@ func main() {
 
 该程序将打印 `Sum is 15`
 
-Go 中的方法就是这样。祝你有美好的一天。
+Go 中的方法就是这样。祝您有美好的一天。
 
-## 下一教程 - [接口 I]()
+## 下一教程 - [接口 I](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md)
 

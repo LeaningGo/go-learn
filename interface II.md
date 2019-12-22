@@ -1,5 +1,5 @@
 这里是 [Golang 学习教程系列](https://github.com/LeaningGo/go-learn)的第十九部分。
-这里是接口 II，如果你没有阅读接口 I 可以访问[接口 I](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md) 阅读。
+这里是接口 II，如果您没有阅读接口 I 可以访问[接口 I](https://github.com/LeaningGo/go-learn/blob/master/interface%20I.md) 阅读。
 
 ## 使用指针接收和值接收实现接口
 
@@ -57,7 +57,7 @@ func main() {
 
 }
 ```
-在 [playground](https://play.golang.org/p/IzspYiAQ82) 运行程序。
+在 [playground](https://play.golang.org/p/IzspYiAQ82) 上运行程序。
 
 在上面的程序中，Person 结构体使用值接收在第十三行中实现了 Describer 接口。
 
@@ -133,7 +133,7 @@ func main() {
     fmt.Println("\nLeaves left =", l.CalculateLeavesLeft())
 }
 ```
-在 [playground](https://play.golang.org/p/DJxS5zxBcV) 运行程序。
+在 [playground](https://play.golang.org/p/DJxS5zxBcV) 上运行程序。
 
 上面的程序有两个接口 SalaryCalculator，LeaveCalculator 分别在第七行和第十一行声明。
 
@@ -203,7 +203,7 @@ func main() {
     fmt.Println("\nLeaves left =", empOp.CalculateLeavesLeft())
 }
 ```
-在 [playground](https://play.golang.org/p/Hia7D-WbZp) 运行程序。
+在 [playground](https://play.golang.org/p/Hia7D-WbZp) 上运行程序。
 
 上面程序第十五行中的 EmployeeOperations 接口是通过嵌入 SalaryCalculator 和 LeaveCalculator 接口创建的。
 
@@ -238,7 +238,7 @@ func main() {
     }
 }
 ```
-在 [playground](https://play.golang.org/p/vwYHC6Y78H) 运行程序。
+在 [playground](https://play.golang.org/p/vwYHC6Y78H) 上运行程序。
 
 上面程序中的 d1 是 nil，该程序将输出
 ```
@@ -259,12 +259,12 @@ func main() {
     d1.Describe()
 }
 ```
-在 [playground](https://play.golang.org/p/rM-rY0uGTI) 运行程序。
+在 [playground](https://play.golang.org/p/rM-rY0uGTI) 上运行程序。
 
 由于上述程序中的 d1 为 nil，因此该程序将因运行时错误而出现故障
 **panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0xffffffff addr=0x0 pc=0xc8527]"**
 
-这就是接口。祝你有美好的一天 :)
+这就是接口。祝您有美好的一天 :)
 
 ## 下一个教程 - [并发介绍](https://github.com/LeaningGo/go-learn/blob/master/Introduction%20to%20Concurrency.md)
